@@ -8,6 +8,9 @@ set expandtab               " insert space characters when ever tab is pressed
 set noesckeys               " remove the delay when pressing O command
 set list                    " show whitespace
 set background=dark         " dark
+set cc=80                   " highlight line length 80, to indicate max length of79
+set hidden                  " enable hidden buffers
+
 colorscheme gruvbox         " colorscheme
 
                             " Spacebar saves and executes file file using python
