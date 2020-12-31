@@ -1,17 +1,52 @@
-syntax on                   " syntax high light
-set number                  " show line number
-set autoindent              " copy indent from current line when make new line
-set tabstop=4               " 4width tab??
-set shiftwidth=4            " 4shift? >>
-set softtabstop=4           " makes spaces act like tabs
-set expandtab               " insert space characters when ever tab is pressed
-set noesckeys               " remove the delay when pressing O command
-set list                    " show whitespace
-set background=dark         " dark
-set cc=80                   " highlight line length 80, to indicate max length of79
-set hidden                  " enable hidden buffers
+let mapleader="\<Space>"
 
-colorscheme gruvbox         " colorscheme
+set background=dark
+set colorcolumn=60
+set list
+set listchars=
+set listchars+=eol:$
+" todo: set up listchars for tabs
 
-                            " Spacebar saves and executes file file using python
-nnoremap <SPACE> :w <bar> !python3 % <CR>
+set splitright      " open new window shit on right side (:vs FILE)
+set showcmd
+set title
+set hidden          " enable hidden buffers
+set nowrap
+set autoindent
+
+set noesckeys       " remove the delay when pressing O command
+set noswapfile
+
+set hlsearch
+set incsearch
+set ignorecase
+nmap <C-j> :nohlsearch<CR>
+
+set tabstop=8
+set shiftwidth=2
+set softtabstop=-1
+set expandtab
+
+set statusline=
+set statusline+=\ %-0.3n            " buffer number
+set statusline+=\ %-0.14(%l,%c%)    " line, column
+set statusline+=\ %f                " rel path in cur dir
+set statusline+=\ %m%r%h%w          " filetype, modified, readonly, help, preview
+set laststatus=2                    " always have status line
+
+" GRAVEYARD
+
+" NETRW
+" nmap <C-k> :Explore<CR>
+" let g:netrw_banner = 0          " remove top banner thingy
+" let g:netrw_liststyle = 0       " thin
+" let g:netrw_winsize = 25        " width 25% of page
+
+" syntax on
+" set relativenumber
+" set numberwidth=3
+" Space s, run
+" Space a, run tests
+" map <Space> <Nop>
+" nmap <Leader>a :!/home/altair/projects/my-http/run_tests<CR>
+" nmap <Leader>s :!/home/altair/projects/my-http/run<CR>
