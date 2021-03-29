@@ -1,28 +1,19 @@
-alias v=". venv/bin/activate"
-alias p="cd ~/projects"
+export PATH=/opt/bin:$PATH:/usr/local/sbin:/usr/sbin:/sbin
+export PS1="\[\e[38;5;214m\]\w\[\e[0m\]$ "
+                    # 213m = best
+                    # 211m also nice
+                    # 219m also nice
+                    # 214m
 
-run() {
-    export FLASK_APP=__init__.py export FLASK_ENV=development
-    flask run
+alias fz="find . -type f | fzy -l 25"
+alias ls='ls -ap --color=auto --group-directories-first'
+
+journal() {
+  cd ~/Documents/Rants
+  vim
+  cd "$OLDPWD"
 }
 
-export VISUAL=vim
-export EDITOR="$VISUAL"
-
-
-fl() {
-    cd "$1"
-    source venv/bin/activate
-    cd app/
-    run() {
-        export FLASK_APP=__init__.py FLASK_ENV=development
-        flask run
-    }
-    off() {
-        cd ~/
-        deactivate
-        unset -f off
-    }
+gr() {
+  grep -rIins --color=always "$1" | less -r
 }
-
-

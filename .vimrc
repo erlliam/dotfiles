@@ -1,10 +1,33 @@
 let mapleader="\<Space>"
 
+let g:loaded_matchparen=1 " disable stupid () and {} highlighting
+
+" FZY
+function! FzyCommand(choice_command, vim_command)
+  try
+    let output = system(a:choice_command . " | fzy ")
+  catch /Vim:Interrupt/
+    " Swallow errors from ^C, allow redraw! below
+  endtry
+  redraw!
+  if v:shell_error == 0 && !empty(output)
+    exec a:vim_command . ' ' . output
+  endif
+endfunction
+
+" todo: figure out how to use script variables as command arguments (keep getting undefined variable)
+let fzy_find_command = 'find . -not \( -path ./node_modules -prune \) -type f'
+nnoremap <leader>e :call FzyCommand(fzy_find_command, ":e")<cr>
+nnoremap <leader>v :call FzyCommand(fzy_find_command, ":vs")<cr>
+nnoremap <leader>s :call FzyCommand(fzy_find_command, ":sp")<cr>
+" FZY
+
 set background=dark
 set colorcolumn=60
 set list
 set listchars=
 set listchars+=eol:$
+set listchars+=tab:>\ 
 " todo: set up listchars for tabs
 
 set splitright      " open new window shit on right side (:vs FILE)
