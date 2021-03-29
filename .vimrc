@@ -1,6 +1,6 @@
 let mapleader="\<Space>"
 
-let g:loaded_matchparen=1 " disable stupid () and {} highlighting
+let g:loaded_matchparen=1 " disable stupid () and {} highlighting plugin
 
 " FZY
 function! FzyCommand(choice_command, vim_command)
@@ -16,6 +16,7 @@ function! FzyCommand(choice_command, vim_command)
 endfunction
 
 " todo: figure out how to use script variables as command arguments (keep getting undefined variable)
+" todo: ignore all directories called node_modules, not just the ones in the current directory
 let fzy_find_command = 'find . -not \( -path ./node_modules -prune \) -type f'
 nnoremap <leader>e :call FzyCommand(fzy_find_command, ":e")<cr>
 nnoremap <leader>v :call FzyCommand(fzy_find_command, ":vs")<cr>
@@ -28,7 +29,6 @@ set list
 set listchars=
 set listchars+=eol:$
 set listchars+=tab:>\ 
-" todo: set up listchars for tabs
 
 set splitright      " open new window shit on right side (:vs FILE)
 set showcmd
@@ -59,17 +59,5 @@ set laststatus=2                    " always have status line
 
 " GRAVEYARD
 
-" NETRW
-" nmap <C-k> :Explore<CR>
-" let g:netrw_banner = 0          " remove top banner thingy
-" let g:netrw_liststyle = 0       " thin
-" let g:netrw_winsize = 25        " width 25% of page
-
 " syntax on
 " set relativenumber
-" set numberwidth=3
-" Space s, run
-" Space a, run tests
-" map <Space> <Nop>
-" nmap <Leader>a :!/home/altair/projects/my-http/run_tests<CR>
-" nmap <Leader>s :!/home/altair/projects/my-http/run<CR>
