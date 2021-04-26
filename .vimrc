@@ -16,7 +16,7 @@ function! FzyCommand(choice_command, vim_command)
 endfunction
 
 " todo: figure out how to use script variables as command arguments (keep getting undefined variable)
-let fzy_find_command = 'find . -not \( -name node_modules -prune \) -type f'
+let fzy_find_command = 'find . -not \( -name node_modules -prune -or -name .git -prune \) -type f'
 nnoremap <leader>e :call FzyCommand(fzy_find_command, ":e")<cr>
 nnoremap <leader>v :call FzyCommand(fzy_find_command, ":vs")<cr>
 nnoremap <leader>s :call FzyCommand(fzy_find_command, ":sp")<cr>
