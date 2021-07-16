@@ -29,6 +29,7 @@ set listchars=
 set listchars+=eol:$
 set listchars+=tab:>\ 
 
+syntax off
 set splitright      " open new window shit on right side (:vs FILE)
 set showcmd
 set title
