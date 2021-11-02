@@ -15,7 +15,6 @@ function! FzyCommand(choice_command, vim_command)
   endif
 endfunction
 
-" todo: figure out how to use script variables as command arguments (keep getting undefined variable)
 let fzy_find_command = 'find . -not \( -name node_modules -prune -or -name .git -prune -or -name venv -prune \) -type f'
 nnoremap <leader>e :call FzyCommand(fzy_find_command, ":e")<cr>
 nnoremap <leader>v :call FzyCommand(fzy_find_command, ":vs")<cr>
@@ -56,8 +55,3 @@ set statusline+=\ %-0.14(%l,%c%)    " line, column
 set statusline+=\ %f                " rel path in cur dir
 set statusline+=\ %m%r%h%w          " filetype, modified, readonly, help, preview
 set laststatus=2                    " always have status line
-
-" GRAVEYARD
-
-" syntax on
-" set relativenumber
