@@ -11,3 +11,12 @@ alias ls='ls -ap --color=auto --group-directories-first'
 gr() {
   rg -in --color=always "$1" | most
 }
+
+export HISTFILESIZE=10000
+export HISTSIZE=10000
+
+# Instantly add commands to history instead of waiting for the shell to exit
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Erase duplicates
+export HISTCONTROL=erasedups
