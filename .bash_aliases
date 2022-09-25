@@ -20,3 +20,6 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Erase duplicates
 export HISTCONTROL=erasedups
+
+# Show time
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
