@@ -9,5 +9,5 @@ alias fz="find . -type f | fzy -l 25"
 alias ls='ls -ap --color=auto --group-directories-first'
 
 gr() {
-  grep -rIins --color=always "$1" | less -r
+  rg -in --color=always "$1" | most
 }

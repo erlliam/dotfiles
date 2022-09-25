@@ -15,7 +15,7 @@ function! FzyCommand(choice_command, vim_command)
   endif
 endfunction
 
-let fzy_find_command = 'find . -not \( -name node_modules -prune -or -name .git -prune -or -name venv -prune \) -type f'
+let fzy_find_command = 'fdfind .'
 nnoremap <leader>e :call FzyCommand(fzy_find_command, ":e")<cr>
 nnoremap <leader>v :call FzyCommand(fzy_find_command, ":vs")<cr>
 nnoremap <leader>s :call FzyCommand(fzy_find_command, ":sp")<cr>
