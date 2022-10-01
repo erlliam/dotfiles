@@ -1,14 +1,14 @@
 {
   "editor.tabSize": 2,
   "editor.fontSize": 16,
-  "editor.fontFamily": "'Hermit', 'monospace', monospace",
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "explorer.confirmDelete": false,
+  "editor.fontFamily": "Fantasque Sans Mono",
+  "editor.fontLigatures": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "eslint.workingDirectories": [{ "mode": "auto" }],
   "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active"
+  "editor.guides.bracketPairs": "active",
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Dracula",
+  "git.untrackedChanges": "hidden"
 }
