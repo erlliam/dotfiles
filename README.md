@@ -6,10 +6,10 @@
     mkdir ~/Projects
     cd ~/Projects/
     git clone git@github.com:erlliam/dotfiles.git
-    ln -s ~/Projects/dotfiles/.vimrc ~/.vimrc
-    ln -s ~/Projects/dotfiles/.bash_aliases ~/.bash_aliases
-    ln -s ~/Projects/dotfiles/settings.json ~/.config/Code/User/settings.json
-    ln -s ~/Projects/dotfiles/keybindings.json ~/.config/Code/User/keybindings.json
+    ln -s ~/projects/dotfiles/.vimrc ~/.vimrc
+    ln -s ~/projects/dotfiles/.bash_aliases ~/.bash_aliases
+    ln -s ~/projects/dotfiles/settings.json ~/.config/Code/User/settings.json
+    ln -s ~/projects/dotfiles/keybindings.json ~/.config/Code/User/keybindings.json
 
 ## Manual installs
 
