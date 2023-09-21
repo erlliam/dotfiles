@@ -11,14 +11,16 @@
     ln -s ~/projects/dotfiles/settings.json ~/.config/Code/User/settings.json
     ln -s ~/projects/dotfiles/keybindings.json ~/.config/Code/User/keybindings.json
 
+    code --install-extension dbaeumer.vscode-eslint
+    code --install-extension dracula-theme.theme-dracula
+    code --install-extension eamodio.gitlens
+    code --install-extension esbenp.prettier-vscode
+    code --install-extension SimonSiefke.svg-preview
+    code --install-extension Vue.volar
+
 ## Manual installs
 
   * https://github.com/belluzj/fantasque-sans
-  * https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula
-  * https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-  * https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-  * https://marketplace.visualstudio.com/items?itemName=Vue.volar
-  * https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
 
 ## Notes
 
