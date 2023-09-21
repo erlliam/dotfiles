@@ -3,8 +3,8 @@
 ## Installation
 
     sudo apt install fzy fd-find ripgrep most vim-gtk3
-    mkdir ~/Projects
-    cd ~/Projects/
+    mkdir ~/projects
+    cd ~/projects/
     git clone git@github.com:erlliam/dotfiles.git
     ln -s ~/projects/dotfiles/.vimrc ~/.vimrc
     ln -s ~/projects/dotfiles/.bash_aliases ~/.bash_aliases
