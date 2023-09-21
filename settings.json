@@ -1,22 +1,27 @@
 {
-  "editor.tabSize": 2,
-  "editor.fontSize": 16,
-  "editor.fontFamily": "'Fantasque Sans Mono'",
-  "editor.fontLigatures": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "gitlens.proxy": {},
-  "explorer.confirmDelete": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "eslint.workingDirectories": [{ "mode": "auto" }],
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "workbench.colorTheme": "Dracula",
-  "git.untrackedChanges": "hidden",
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
-  "window.titleBarStyle": "custom"
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Fantasque Sans Mono'",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.rulers": [60],
+  "editor.tabSize": 2,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "explorer.confirmDelete": false,
+  "git.untrackedChanges": "hidden",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "Dracula",
+  "workbench.tree.indent": 16
 }
